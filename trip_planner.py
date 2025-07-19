@@ -25,7 +25,7 @@ if not st.session_state.authenticated:
     password_input = st.text_input("Enter password", type="password")
     if password_input == st.secrets["password"]["trip_password"]:
         st.session_state.authenticated = True
-        st.experimental_rerun()
+        st.rerun()
     else:
         st.stop()
 
